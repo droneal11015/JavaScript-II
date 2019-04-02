@@ -61,17 +61,22 @@ multiplyNums(16,27, function(product){
 });
 
 
-function contains(item, list, cb) {
+function contains(items, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
   for (let i = 0; i < list.length; i++) {
-    if (list[i] === item) {
+    if (list[i] === items) {
       return cb(true);
     } else {
       return cb(false);
     }
   }
+  
 }
+
+contains('Notebook', items, function(present) {
+  console.log(present);
+})
 
 /* STRETCH PROBLEM */
 
