@@ -27,8 +27,11 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
-  callback(arr.length);
-}
+  cb(arr.length);
+};
+getLength(items, length => {
+  console.log(`The length of the arra is ${length}.`);
+});
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
@@ -37,10 +40,12 @@ function last(arr, cb) {
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
+  cb(x + y);
 }
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
+  cb(x * y);
 }
 
 function contains(item, list, cb) {
