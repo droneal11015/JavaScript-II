@@ -2,6 +2,32 @@
 // Write a simple closure of your own creation.  Keep it simple!
 
 
+function videoGames1() {
+
+  const adults = "Halo";
+  console.log(`Adults enjoyed playing ${adults}`);
+ 
+  
+  function teenGames() {
+	const teens = "Fortnite"
+    console.log(`Teens enjoyed playing ${teens}`);
+
+	
+    function kidGames() {
+    const kids = "Minecraft"
+		console.log(`Kids enjoyed playing ${kids}`);
+		console.log(`Kids also enjoyed playing ${teens}`);
+
+	}
+    
+    kidGames();
+  }
+  
+  teenGames();
+}
+
+videoGames1();
+
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
 
