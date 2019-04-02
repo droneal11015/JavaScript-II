@@ -28,20 +28,28 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
   cb(arr.length);
-};
-getLength(items, length => {
-  console.log(`The length of the arra is ${length}.`);
+}
+getLength(items, function(length) {
+  console.log(length);
 });
+
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
   cb(arr[arr.length-1]);
 }
+last(items, function(last) {
+  console.log(last);
+});
+
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
   cb(x + y);
 }
+sumNums(16,27, function(sum){
+  console.log(sum);
+});
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
